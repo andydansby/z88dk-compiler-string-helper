@@ -63,17 +63,47 @@
     <Compile Include="compiler choice.Designer.cs">
       <DependentUpon>compiler choice.cs</DependentUpon>
     </Compile>
+    <Compile Include="files to compile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="files to compile.Designer.cs">
+      <DependentUpon>files to compile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="floating point.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="floating point.Designer.cs">
+      <DependentUpon>floating point.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="List wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List wizard.Designer.cs">
+      <DependentUpon>List wizard.cs</DependentUpon>
+    </Compile>
     <Compile Include="optimization.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="optimization.Designer.cs">
       <DependentUpon>optimization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output file.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output file.Designer.cs">
+      <DependentUpon>output file.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Output Media.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Output Media.Designer.cs">
+      <DependentUpon>Output Media.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,11 +146,23 @@
     <EmbeddedResource Include="compiler choice.resx">
       <DependentUpon>compiler choice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="floating point.resx">
+      <DependentUpon>floating point.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="List wizard.resx">
+      <DependentUpon>List wizard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="optimization.resx">
       <DependentUpon>optimization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output file.resx">
+      <DependentUpon>output file.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Output Media.resx">
+      <DependentUpon>Output Media.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

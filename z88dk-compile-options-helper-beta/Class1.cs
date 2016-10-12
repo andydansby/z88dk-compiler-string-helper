@@ -24,6 +24,19 @@ namespace z88dk_compile_options_helper_beta
 		public static bool classicCompiler = false;
 
 		public static bool sdcc_compiler = true;
+
+
+		//globals for list wizard to check if options are choosen
+		public static bool choosenTarget = false;
+		public static bool compilerChoice = false;
+		public static bool verboseOptions = false;
+		public static bool cleanupOptions = false;
+		public static bool floatingPointOptions = false;
+		public static bool zorgOptions = false;
+		public static bool optimizationOptions = false;
+		public static bool terminalOptions = false;
+		public static bool mediaOptions = false;
+
 		
 
 		public bool machine_type_for_floating_point(bool type)
@@ -40,7 +53,19 @@ namespace z88dk_compile_options_helper_beta
 			//return true;
 		}
 
+		public bool interface_one_zx(bool type)
+		{
+			if (machine == "zx")
+			{
+				return true;
+			}
 
+			else
+			{
+				return false;
+			}
+			//return true;
+		}
 
 
 

@@ -31,19 +31,23 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(zorg));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.reset_zorg = new System.Windows.Forms.Button();
+			this.button19 = new System.Windows.Forms.Button();
+			this.button18 = new System.Windows.Forms.Button();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.trackBar1 = new System.Windows.Forms.TrackBar();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.option_ZORG = new System.Windows.Forms.CheckBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.button3 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
 			this.SuspendLayout();
@@ -51,13 +55,15 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+			this.panel1.Controls.Add(this.reset_zorg);
+			this.panel1.Controls.Add(this.button19);
+			this.panel1.Controls.Add(this.button18);
 			this.panel1.Controls.Add(this.textBox3);
 			this.panel1.Controls.Add(this.trackBar1);
 			this.panel1.Controls.Add(this.textBox2);
 			this.panel1.Controls.Add(this.label5);
 			this.panel1.Controls.Add(this.label4);
 			this.panel1.Controls.Add(this.label1);
-			this.panel1.Controls.Add(this.option_ZORG);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.button1);
@@ -65,6 +71,37 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(412, 150);
 			this.panel1.TabIndex = 125;
+			// 
+			// reset_zorg
+			// 
+			this.reset_zorg.Location = new System.Drawing.Point(221, 5);
+			this.reset_zorg.Name = "reset_zorg";
+			this.reset_zorg.Size = new System.Drawing.Size(95, 23);
+			this.reset_zorg.TabIndex = 152;
+			this.reset_zorg.Text = "Reset to Default";
+			this.reset_zorg.UseVisualStyleBackColor = true;
+			this.reset_zorg.Click += new System.EventHandler(this.reset_zorg_Click);
+			// 
+			// button19
+			// 
+			this.button19.Enabled = false;
+			this.button19.Location = new System.Drawing.Point(206, 123);
+			this.button19.Name = "button19";
+			this.button19.Size = new System.Drawing.Size(75, 23);
+			this.button19.TabIndex = 151;
+			this.button19.Text = "Remove";
+			this.button19.UseVisualStyleBackColor = true;
+			this.button19.Click += new System.EventHandler(this.button19_Click);
+			// 
+			// button18
+			// 
+			this.button18.Location = new System.Drawing.Point(123, 123);
+			this.button18.Name = "button18";
+			this.button18.Size = new System.Drawing.Size(75, 23);
+			this.button18.TabIndex = 150;
+			this.button18.Text = "Enter";
+			this.button18.UseVisualStyleBackColor = true;
+			this.button18.Click += new System.EventHandler(this.button18_Click);
 			// 
 			// textBox3
 			// 
@@ -120,17 +157,6 @@
 			this.label1.TabIndex = 143;
 			this.label1.Text = "0";
 			// 
-			// option_ZORG
-			// 
-			this.option_ZORG.AutoSize = true;
-			this.option_ZORG.Location = new System.Drawing.Point(14, 22);
-			this.option_ZORG.Name = "option_ZORG";
-			this.option_ZORG.Size = new System.Drawing.Size(57, 17);
-			this.option_ZORG.TabIndex = 140;
-			this.option_ZORG.Text = "ZORG";
-			this.option_ZORG.UseVisualStyleBackColor = true;
-			this.option_ZORG.CheckedChanged += new System.EventHandler(this.option_ZORG_CheckedChanged);
-			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
@@ -162,25 +188,51 @@
 			// 
 			// richTextBox1
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(12, 198);
+			this.richTextBox1.Location = new System.Drawing.Point(12, 182);
 			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(406, 206);
+			this.richTextBox1.Size = new System.Drawing.Size(406, 60);
 			this.richTextBox1.TabIndex = 126;
-			this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+			this.richTextBox1.Text = "The list of pragmas affecting the CRT at compile time is listed in the wiki: \nhtt" +
+    "p://www.z88dk.org/wiki/doku.php?id=t … figuration .";
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(12, 430);
+			this.textBox1.Location = new System.Drawing.Point(12, 265);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(412, 40);
 			this.textBox1.TabIndex = 127;
 			// 
+			// button3
+			// 
+			this.button3.BackColor = System.Drawing.Color.LightGreen;
+			this.button3.Location = new System.Drawing.Point(439, 274);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(75, 23);
+			this.button3.TabIndex = 129;
+			this.button3.Text = "NEXT";
+			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
+			// 
+			// button4
+			// 
+			this.button4.BackColor = System.Drawing.Color.Coral;
+			this.button4.Location = new System.Drawing.Point(439, 239);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(75, 23);
+			this.button4.TabIndex = 128;
+			this.button4.Text = "Start Over";
+			this.button4.UseVisualStyleBackColor = false;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
+			// 
 			// zorg
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(497, 494);
+			this.ClientSize = new System.Drawing.Size(529, 318);
+			this.ControlBox = false;
+			this.Controls.Add(this.button3);
+			this.Controls.Add(this.button4);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.panel1);
@@ -201,7 +253,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.RichTextBox richTextBox1;
-		private System.Windows.Forms.CheckBox option_ZORG;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
@@ -210,5 +261,10 @@
 		private System.Windows.Forms.TrackBar trackBar1;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.Button button19;
+		private System.Windows.Forms.Button button18;
+		private System.Windows.Forms.Button reset_zorg;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button button4;
 	}
 }

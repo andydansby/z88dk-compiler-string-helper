@@ -36,14 +36,6 @@ namespace z88dk_compile_options_helper_beta
 		{
 		}
 
-
-
-
-
-
-
-
-
 		private void radioButton17_CheckedChanged(object sender, EventArgs e)
 		{
 			button3.Enabled = false;
@@ -268,34 +260,24 @@ namespace z88dk_compile_options_helper_beta
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			verbose_options frm = new verbose_options(textBox1.Text);
-			frm.Show();
-			this.Close();
+
+			if (zccvariables.mainMenuChoice == 3)
+			{
+				//List_wizard
+				zccvariables.compilerChoice = true;
+
+				List_wizard frm = new List_wizard(textBox1.Text);
+				frm.Show();
+
+				this.Close();
+			}
+			else
+			{
+				verbose_options frm = new verbose_options(textBox1.Text);
+				frm.Show();
+				this.Close();
+			}
 		}
-
-		private void button6_Click(object sender, EventArgs e)
-		{
-			zorg frm = new zorg(textBox1.Text);
-			frm.Show();
-		}
-
-		private void button7_Click(object sender, EventArgs e)
-		{
-			terminal_driver frm = new terminal_driver(textBox1.Text);
-			frm.Show();
-		}
-
-		private void button5_Click(object sender, EventArgs e)
-		{
-			optimization frm = new optimization(textBox1.Text);
-			frm.Show();
-		}
-
-
-
-
-
-
 
 	}
 }

@@ -66,17 +66,19 @@ namespace z88dk_compile_options_helper_beta
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			/*
-			button1.Enabled = false;
-			button2.Enabled = false;
-			button3.Enabled = false;
-			*/
+			//MessageBox.Show("not yet implemented");
+
+			//floating_point frm = new floating_point(textBox1.Text);
+			//frm.Show();
 
 			//long wizard
-			//zccvariables.mainMenuChoice = 3;
-			//target frm = new target();
-			//frm.Show();
-			MessageBox.Show("not yet implemented");
+			zccvariables.mainMenuChoice = 3;
+
+			List_wizard frm = new List_wizard();
+			frm.Show();
+
+
+			//this.Hide();
 		}
 
 		private void button4_Click(object sender, EventArgs e)

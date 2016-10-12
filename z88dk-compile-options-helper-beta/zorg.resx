@@ -121,7 +121,11 @@
     <value>17, 17</value>
   </metadata>
   <data name="button1.ToolTip" xml:space="preserve">
-    <value>"-zorg=nnnnn"    (n in decimal)  is actually a feature of SCCZ80 (the C compiler) and not zcc.  
+    <value>The Zorg option allows you to set the starting address of the machine code program once 
+compiled, the ORiGinating address.  This address is different for every machine.
+
+
+"-zorg=nnnnn"    (n in decimal)  is actually a feature of SCCZ80 (the C compiler) and not zcc.  
 You can see the option with "sccz80 -h"
 
 What this means is if you are compiling using SDCC you cannot use -zorg to set the org address.  
@@ -130,21 +134,6 @@ The preferred way to set the org address with the new C library is to use a prag
 Any compile with "-clib=new", "-clib=sdcc_ix" and "-clib=sdcc_iy" is using the new C library and 
 will have CRTs that can be customized using pragmas in the C source.  
 
-The list of pragmas affecting the CRT at compile time is listed in the wiki: 
-http://www.z88dk.org/wiki/doku.php?id=t … figuration .
-</value>
-  </data>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>"-zorg=nnnnn"    (n in decimal)  is actually a feature of SCCZ80 (the C compiler) and not zcc.  
-You can see the option with "sccz80 -h"
-
-What this means is if you are compiling using SDCC you cannot use -zorg to set the org address.  
-The preferred way to set the org address with the new C library is to use a pragma.  
-
-Any compile with "-clib=new", "-clib=sdcc_ix" and "-clib=sdcc_iy" is using the new C library and 
-will have CRTs that can be customized using pragmas in the C source.  
-
-The list of pragmas affecting the CRT at compile time is listed in the wiki: 
-http://www.z88dk.org/wiki/doku.php?id=t … figuration .</value>
+The list of pragmas affecting the CRT at compile time is listed in the wiki: </value>
   </data>
 </root>

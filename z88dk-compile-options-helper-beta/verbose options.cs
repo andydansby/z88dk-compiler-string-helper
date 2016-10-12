@@ -140,9 +140,22 @@ namespace z88dk_compile_options_helper_beta
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			option_preserve frm = new option_preserve(textBox1.Text);
-			frm.Show();
-			this.Close();
+			if (zccvariables.mainMenuChoice == 3)
+			{
+				//List_wizard
+				zccvariables.verboseOptions = true;
+
+				List_wizard frm = new List_wizard(textBox1.Text);
+				frm.Show();
+
+				this.Close();
+			}
+			else
+			{
+				option_preserve frm = new option_preserve(textBox1.Text);
+				frm.Show();
+				this.Close();
+			}
 		}
 
 

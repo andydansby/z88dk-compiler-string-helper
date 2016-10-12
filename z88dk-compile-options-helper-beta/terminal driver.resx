@@ -120,7 +120,7 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="richTextBox1.Text" xml:space="preserve">
+  <data name="button1.ToolTip" xml:space="preserve">
     <value>After the library is selected you can also choose startup values.
  These decide what sort of terminal drivers will be used
 
@@ -137,7 +137,4 @@
 I think and possible one or two more. 
 0 is default.</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

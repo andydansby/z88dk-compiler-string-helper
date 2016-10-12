@@ -31,8 +31,6 @@ namespace z88dk_compile_options_helper_beta
 
 		private void enableOptions()
 		{
-
-
 		}
 
 		private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -124,9 +122,22 @@ namespace z88dk_compile_options_helper_beta
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			zorg frm = new zorg(textBox1.Text);
-			frm.Show();
-			this.Close();
+			if (zccvariables.mainMenuChoice == 3)
+			{
+				//List_wizard
+				zccvariables.cleanupOptions = true;
+
+				List_wizard frm = new List_wizard(textBox1.Text);
+				frm.Show();
+
+				this.Close();
+			}
+			else
+			{
+				floating_point frm = new floating_point(textBox1.Text);
+				frm.Show();
+				this.Close();
+			}
 		}
 
 		private void preserve_option_CheckedChanged(object sender, EventArgs e)

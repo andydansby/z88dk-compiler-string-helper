@@ -97,6 +97,7 @@
 			this.label16 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
+			this.reset_zorg = new System.Windows.Forms.Button();
 			this.button19 = new System.Windows.Forms.Button();
 			this.label25 = new System.Windows.Forms.Label();
 			this.button18 = new System.Windows.Forms.Button();
@@ -109,7 +110,6 @@
 			this.label22 = new System.Windows.Forms.Label();
 			this.label23 = new System.Windows.Forms.Label();
 			this.label24 = new System.Windows.Forms.Label();
-			this.reset_zorg = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -123,10 +123,10 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(9, 519);
+			this.textBox1.Location = new System.Drawing.Point(9, 498);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(472, 19);
+			this.textBox1.Size = new System.Drawing.Size(472, 40);
 			this.textBox1.TabIndex = 108;
 			// 
 			// panel1
@@ -767,7 +767,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(9, 503);
+			this.label2.Location = new System.Drawing.Point(163, 479);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(145, 16);
 			this.label2.TabIndex = 124;
@@ -849,10 +849,20 @@
 			this.panel8.Controls.Add(this.label22);
 			this.panel8.Controls.Add(this.label23);
 			this.panel8.Controls.Add(this.button17);
-			this.panel8.Location = new System.Drawing.Point(33, 302);
+			this.panel8.Location = new System.Drawing.Point(30, 302);
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new System.Drawing.Size(438, 136);
 			this.panel8.TabIndex = 132;
+			// 
+			// reset_zorg
+			// 
+			this.reset_zorg.Location = new System.Drawing.Point(277, 4);
+			this.reset_zorg.Name = "reset_zorg";
+			this.reset_zorg.Size = new System.Drawing.Size(95, 23);
+			this.reset_zorg.TabIndex = 150;
+			this.reset_zorg.Text = "Reset to Default";
+			this.reset_zorg.UseVisualStyleBackColor = true;
+			this.reset_zorg.Click += new System.EventHandler(this.reset_zorg_Click);
 			// 
 			// button19
 			// 
@@ -971,16 +981,6 @@
 			this.label24.Size = new System.Drawing.Size(19, 20);
 			this.label24.TabIndex = 133;
 			this.label24.Text = "7";
-			// 
-			// reset_zorg
-			// 
-			this.reset_zorg.Location = new System.Drawing.Point(277, 4);
-			this.reset_zorg.Name = "reset_zorg";
-			this.reset_zorg.Size = new System.Drawing.Size(95, 23);
-			this.reset_zorg.TabIndex = 150;
-			this.reset_zorg.Text = "Reset to Default";
-			this.reset_zorg.UseVisualStyleBackColor = true;
-			this.reset_zorg.Click += new System.EventHandler(this.reset_zorg_Click);
 			// 
 			// quick_start
 			// 

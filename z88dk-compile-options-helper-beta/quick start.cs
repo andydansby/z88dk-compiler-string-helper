@@ -772,7 +772,6 @@ namespace z88dk_compile_options_helper_beta
 			{
 				floatingPoint = "";
 				ListOptions.Add(floatingPoint);
-				//MessageBox.Show("Radio Button 2 off");
 				string floatpoint = string.Join("", ListOptions.ToArray());
 				textBox1.Text = floatpoint;
 			}
@@ -796,7 +795,6 @@ namespace z88dk_compile_options_helper_beta
 			{
 				floatingPoint = "-lm ";
 				ListOptions.Add(floatingPoint);
-				//MessageBox.Show("Radio Button 2 off");
 				string floatpoint = string.Join("", ListOptions.ToArray());
 				textBox1.Text = floatpoint;
 			}
@@ -820,7 +818,6 @@ namespace z88dk_compile_options_helper_beta
 			{
 				floatingPoint = "-lmzx ";
 				ListOptions.Add(floatingPoint);
-				//MessageBox.Show("Radio Button 2 off");
 				string floatpoint = string.Join("", ListOptions.ToArray());
 				textBox1.Text = floatpoint;
 			}
@@ -1772,6 +1769,9 @@ namespace z88dk_compile_options_helper_beta
 
 			button18.Enabled = false;
 			button19.Enabled = true;
+			textBox7.Enabled = false;
+			trackBar1.Enabled = false;
+			reset_zorg.Enabled = false;
 		}
 
 		private void button19_Click(object sender, EventArgs e)
@@ -1784,6 +1784,9 @@ namespace z88dk_compile_options_helper_beta
 
 			button18.Enabled = true;
 			button19.Enabled = false;
+			textBox7.Enabled = true;
+			trackBar1.Enabled = true;
+			reset_zorg.Enabled = true;
 		}
 
 		private void reset_zorg_Click(object sender, EventArgs e)

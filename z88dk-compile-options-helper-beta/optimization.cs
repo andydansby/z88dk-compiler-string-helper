@@ -19,6 +19,12 @@ namespace z88dk_compile_options_helper_beta
 			InitializeComponent();
 		}
 
+		//globals
+		string O_0_optimizer_options = "";
+		string SO_0_optimizer_options = "";
+
+		int max_alloc = 3000;
+
 		public optimization(string strTextBox)
 		{
 			InitializeComponent();
@@ -28,16 +34,24 @@ namespace z88dk_compile_options_helper_beta
 
 			if (zccvariables.sdcc_compiler == true)
 			{
-				MessageBox.Show("SDCC");
+				//MessageBox.Show("SDCC");
+				label1.Text = "SDCC";
 
 				enable_O_n.Enabled = true;
 				enable_SO_n.Enabled = true;
-				Enable_max_alloc_per_node.Enabled = true;
+				//Enable_max_alloc_per_node.Enabled = true;
 				Enable_OPT_Code_Size.Enabled = true;
+				trackBar1.Enabled = true;
+
+				max_alloc_textbox.Enabled = true;
+				max_alloc_textbox.Text = max_alloc.ToString();
+
+				enter_max_alloc.Enabled = true;
+				remove_max_alloc.Enabled = false;
 
 				enable_O_n.Checked = false;
 				enable_SO_n.Checked = false;
-				Enable_max_alloc_per_node.Checked = false;
+				//Enable_max_alloc_per_node.Checked = false;
 				Enable_OPT_Code_Size.Checked = false;
 
 			}
@@ -45,16 +59,17 @@ namespace z88dk_compile_options_helper_beta
 
 			if (zccvariables.sdcc_compiler == false)
 			{
-				MessageBox.Show("SCCZ80");
+				//MessageBox.Show("SCCZ80");
+				label1.Text = "SCCZ80";
 
 				enable_O_n.Enabled = true;
 				enable_SO_n.Enabled = false;
-				Enable_max_alloc_per_node.Enabled = false;
+				//Enable_max_alloc_per_node.Enabled = false;
 				Enable_OPT_Code_Size.Enabled = false;
 
 				enable_O_n.Checked = false;
 				enable_SO_n.Checked = false;
-				Enable_max_alloc_per_node.Checked = false;
+				//Enable_max_alloc_per_node.Checked = false;
 				Enable_OPT_Code_Size.Checked = false;
 			}
 
@@ -110,8 +125,88 @@ namespace z88dk_compile_options_helper_beta
 				O_1_optimizer.Checked = false;
 				O_2_optimizer.Checked = false;
 				O_3_optimizer.Checked = false;
+
+				//turn off optimizer
+				SO_0_optimizer_options = "";
+				ListOptions.Remove(SO_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
 			}
 		}
+
+
+		private void O_0_optimizer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (O_0_optimizer.Checked)
+			{
+				O_0_optimizer_options = "-O0 ";
+				ListOptions.Add(O_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+			else if (O_0_optimizer.Checked == false)
+			{
+				O_0_optimizer_options = "-O0 ";
+				ListOptions.Remove(O_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+		}
+
+		private void O_1_optimizer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (O_1_optimizer.Checked)
+			{
+				O_0_optimizer_options = "-O1 ";
+				ListOptions.Add(O_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+			else if (O_1_optimizer.Checked == false)
+			{
+				O_0_optimizer_options = "-O1 ";
+				ListOptions.Remove(O_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+		}
+
+		private void O_2_optimizer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (O_2_optimizer.Checked)
+			{
+				O_0_optimizer_options = "-O2 ";
+				ListOptions.Add(O_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+			else if (O_2_optimizer.Checked == false)
+			{
+				O_0_optimizer_options = "-O2 ";
+				ListOptions.Remove(O_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+		}
+
+		private void O_3_optimizer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (O_3_optimizer.Checked)
+			{
+				O_0_optimizer_options = "-O3 ";
+				ListOptions.Add(O_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+			else if (O_3_optimizer.Checked == false)
+			{
+				O_0_optimizer_options = "-O3 ";
+				ListOptions.Remove(O_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+		}
+
 
 		private void enable_SO_n_CheckedChanged(object sender, EventArgs e)
 		{
@@ -154,6 +249,240 @@ namespace z88dk_compile_options_helper_beta
 			}
 		}
 
+
+		private void SO_0_sdcc_optimizer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (SO_0_sdcc_optimizer.Checked)
+			{
+				SO_0_optimizer_options = "-SO0 ";
+				ListOptions.Add(SO_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+			else if (SO_0_sdcc_optimizer.Checked == false)
+			{
+				SO_0_optimizer_options = "-SO0 ";
+				ListOptions.Remove(SO_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+		}
+
+		private void SO_1_sdcc_optimizer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (SO_1_sdcc_optimizer.Checked)
+			{
+				SO_0_optimizer_options = "-SO1 ";
+				ListOptions.Add(SO_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+			else if (SO_1_sdcc_optimizer.Checked == false)
+			{
+				SO_0_optimizer_options = "-SO1 ";
+				ListOptions.Remove(SO_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+		}
+
+		private void SO_2_sdcc_optimizer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (SO_2_sdcc_optimizer.Checked)
+			{
+				SO_0_optimizer_options = "-SO2 ";
+				ListOptions.Add(SO_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+			else if (SO_2_sdcc_optimizer.Checked == false)
+			{
+				SO_0_optimizer_options = "-SO2 ";
+				ListOptions.Remove(SO_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+		}
+
+		private void SO_3_sdcc_optimizer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (SO_3_sdcc_optimizer.Checked)
+			{
+				SO_0_optimizer_options = "-SO3 ";
+				ListOptions.Add(SO_0_optimizer_options);
+				//MessageBox.Show("Radio Button 2 off");
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+			else if (SO_3_sdcc_optimizer.Checked == false)
+			{
+				SO_0_optimizer_options = "-SO3 ";
+				ListOptions.Remove(SO_0_optimizer_options);
+				string floatpoint = string.Join("", ListOptions.ToArray());
+				textBox1.Text = floatpoint;
+			}
+		}
+
+		private void trackBar1_Scroll(object sender, EventArgs e)
+		{
+			//textBox7.Text = trackBar1.Value.ToString();
+			//textBox8.Text = trackBar1.Value.ToString();
+
+			//max_alloc = trackBar1.Value;
+			//max_alloc_textbox
+
+			var round = ((int)(trackBar1.Value / 1000) * 1000);
+
+			trackBar1.Value = round;
+
+			max_alloc_textbox.Text = trackBar1.Value.ToString();
+
+			max_alloc = trackBar1.Value;
+		}
+
+
+
+		private void max_alloc_textbox_TextChanged(object sender, EventArgs e)
+		{
+			int temp;
+
+			if (!int.TryParse(max_alloc_textbox.Text, out temp))//check to see if letters
+			{
+				if (max_alloc_textbox.TextLength > 0)
+				{
+					max_alloc_textbox.Text = max_alloc_textbox.Text.Substring(0, max_alloc_textbox.Text.Length - 1);
+
+					max_alloc_textbox.Focus();
+					max_alloc_textbox.SelectionStart = max_alloc_textbox.Text.Length;
+				}
+			}
+
+
+			if (int.TryParse(max_alloc_textbox.Text, out temp))
+			{
+				if (temp > 200000)
+				{
+					//too high
+					MessageBox.Show("The max_alloc_textbox setting is too high");
+					temp = 200000;
+					max_alloc_textbox.Text = "200000";
+
+					max_alloc_textbox.Focus();
+					max_alloc_textbox.SelectionStart = max_alloc_textbox.Text.Length;
+				}
+				if (temp < 0)
+				{
+					//too low
+					MessageBox.Show("The max_alloc_textbox setting is too low");
+					temp = 0;
+					max_alloc_textbox.Text = "0";
+
+					max_alloc_textbox.Focus();
+					max_alloc_textbox.SelectionStart = max_alloc_textbox.Text.Length;
+				}
+
+
+				else
+				{
+					// just right
+					temp = int.Parse(max_alloc_textbox.Text);
+					trackBar1.Value = int.Parse(temp.ToString());
+
+					max_alloc = temp;
+				}
+			}
+
+		}
+
+
+
+		private void enter_max_alloc_Click(object sender, EventArgs e)
+		{
+
+			var round = ((int.Parse(max_alloc_textbox.Text) / 1000) * 1000);
+			max_alloc_textbox.Text = round.ToString();
+
+			max_alloc = round;
+
+
+			//--max-allocs-per-nodeNNNN
+			string max = "--max-allocs-per-node";
+			ListOptions.Add(max + max_alloc + " ");
+			string max_allocOption = string.Join("", ListOptions.ToArray());
+			textBox1.Text = max_allocOption;
+
+			enter_max_alloc.Enabled = false;
+			remove_max_alloc.Enabled = true;
+			max_alloc_textbox.Enabled = false;
+			trackBar1.Enabled = false;
+		}
+
+		private void remove_max_alloc_Click(object sender, EventArgs e)
+		{
+			//--max-allocs-per-nodeNNNN
+			string max = "--max-allocs-per-node";
+			ListOptions.Remove(max + max_alloc + " ");
+			string max_allocOption = string.Join("", ListOptions.ToArray());
+			textBox1.Text = max_allocOption;
+
+			enter_max_alloc.Enabled = true;
+			remove_max_alloc.Enabled = false;
+			max_alloc_textbox.Enabled = true;
+			trackBar1.Enabled = true;
+
+			//SO_0_optimizer_options = "-SO3 ";
+			//ListOptions.Remove(SO_0_optimizer_options);
+			//string floatpoint = string.Join("", ListOptions.ToArray());
+			//textBox1.Text = floatpoint;
+		}
+
+		private void Enable_OPT_Code_Size_CheckedChanged(object sender, EventArgs e)
+		{
+			if (Enable_OPT_Code_Size.Checked == true)
+			{
+				string OPT_Code_Size = "--opt-code-size ";
+				ListOptions.Add(OPT_Code_Size);
+				string OPTSize = string.Join("", ListOptions.ToArray());
+				textBox1.Text = OPTSize;
+			}
+			if (Enable_OPT_Code_Size.Checked == false)
+			{
+				string OPT_Code_Size = "--opt-code-size ";
+				ListOptions.Remove(OPT_Code_Size);
+				string OPTSize = string.Join("", ListOptions.ToArray());
+				textBox1.Text = OPTSize;
+			}
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			zccvariables.restartForm1 = true;
+
+			Form1 startOver = (Form1)Application.OpenForms["Form1"];
+			startOver.Show();
+
+			this.Close();
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			if (zccvariables.mainMenuChoice == 3)
+			{
+				//List_wizard
+				zccvariables.optimizationOptions = true;
+
+				List_wizard frm = new List_wizard(textBox1.Text);
+				frm.Show();
+
+				this.Close();
+			}
+			else
+			{
+				terminal_driver frm = new terminal_driver(textBox1.Text);
+				frm.Show();
+				this.Close();
+			}
+		}
 
 
 

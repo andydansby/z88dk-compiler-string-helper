@@ -383,11 +383,24 @@ namespace z88dk_compile_options_helper_beta
 				this.Close();
 			}
 
-			//long wizard
+			//list wizard
 			if (zccvariables.mainMenuChoice == 3)
 			{
-				compiler_choice frm = new compiler_choice(textBox1.Text);
+				//Form1 frm = (Form1)Application.OpenForms["Form1"];
+
+				//List_wizard(textBox1.Text);
+
+				//List_wizard frm = (List_wizard)Application.OpenForms["List_wizard"];
+				//frm.Show();
+
+
+
+				//List_wizard
+				zccvariables.choosenTarget = true;
+
+				List_wizard frm = new List_wizard(textBox1.Text);
 				frm.Show();
+
 				this.Close();
 			}
 		}
